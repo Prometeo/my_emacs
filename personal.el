@@ -43,6 +43,19 @@
 (setq search-highlight        t)
 (setq query-replace-highlight t)
 
+(setq column-number-mode 1)                          ;; Show column number
+(setq use-dialog-box nil)                            ;; Not user GUI dialogs, only minibuffer
+(auto-fill-mode -1)                                  ;; ?????
+(setq-default indent-tabs-mode nil)                  ;; Do not use TABS.
+(setq-default tab-width          4)                  ;; Replace TAB to 4 spaces
+(setq-default c-basic-offset     4)
+(setq-default standart-indent    4)                  ;; Set indent width 4 spaces
+(setq backup-inhibited t)                            ;; Do not create backup files
+(setq auto-save-default nil)                         ;; Disable autosave
+(setq scroll-preserve-screen-position 10)            ;; Set next 10 lines after cursor go to page down
+(setq neo-window-width 35)
+(global-prettify-symbols-mode 1) ;;; Replace "lambda" to λ, function to
+
 
 ;; Calling neotree globally at the start
 ;;(neotree-show)

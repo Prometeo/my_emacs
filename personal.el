@@ -39,6 +39,10 @@
 (setq dired-listing-switches "-alk")
 (setq directory-free-space-args "-Pm")
 
+;; Highlight search results
+(setq search-highlight        t)
+(setq query-replace-highlight t)
+
 
 ;; Calling neotree globally at the start
 ;;(neotree-show)

@@ -5,10 +5,13 @@
 (require 'ido)
 (require 'paredit)
 (require 'rainbow-delimiters)
-
+(require 'dired)
+(require 'neotree)
+(require 'ibuffer)
 
 
 (cua-mode 1)                   ;;; enabliz ctrl-z, ctrl-v ...
+(dired-omit-mode 1)
 (electric-pair-mode 1)         ;; Electric pair mode
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-git-gutter-mode +1)    ;;; Show +, - and = on left side, by git status
@@ -31,6 +34,10 @@
 ;; setting up ido mode
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
+
+;; setting up dired mode
+(setq dired-listing-switches "-alk")
+(setq directory-free-space-args "-Pm")
 
 
 ;; Calling neotree globally at the start

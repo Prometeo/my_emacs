@@ -8,6 +8,7 @@
 (require 'less-css-mode)
 (require 'emmet-mode)
 (require 'json-mode)
+(require 'auto-complete)
 
 ;;; Comment:
 ;;; Uncomment for compiling less at save
@@ -88,3 +89,7 @@
 
 
 (setq web-mode-enable-auto-pairing t)
+
+(setq web-mode-ac-sources-alist
+  '(("css" . (ac-source-css-property))
+    ("html" . (ac-source-words-in-buffer ac-source-abbrev))))

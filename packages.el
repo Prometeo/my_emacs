@@ -23,6 +23,9 @@
        '(
 	 ac-html
 	 auto-complete
+	 company-mode
+         company-tern
+	 company-web
 	 el-get
 	 emacs-neotree
 	 emmet-mode

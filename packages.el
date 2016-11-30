@@ -46,8 +46,9 @@
      paredit
      php-mode
      pip-requirements
-     pymacs
+     py-autopep8
      pyenv
+     pymacs
      powerline
      rainbow-delimiters
      smartparens

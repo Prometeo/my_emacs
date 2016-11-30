@@ -21,34 +21,39 @@
       (append
        ;; list of packages we use straight from official recipes
        '(
-	 ac-html
-	 auto-complete
-	 company-mode
-         company-tern
-	 company-web
-	 el-get
-	 emacs-neotree
-	 emmet-mode
-	 fill-column-indicator
-	 flycheck
-	 flycheck-pos-tip
-	 git-gutter
-	 helm
-	 highlight-parentheses
-	 indent-guide
-	 json-mode
-	 js2-mode
-	 less-css-mode
-	 ;;mode-icons
-	 monokai-theme
-	 paredit
-	 php-mode
-	 powerline
-	 rainbow-delimiters
-	 smartparens
-	 tern
-	 undo-tree
-	 web-mode
+     ac-html
+     auto-complete
+     company-mode
+     company-tern
+     company-web
+     el-get
+     elpy
+     emacs-neotree
+     emmet-mode
+     fill-column-indicator
+     flycheck
+     flycheck-pos-tip
+     git-gutter
+     helm
+     highlight-parentheses
+     indent-guide
+     jedi
+     json-mode
+     js2-mode
+     less-css-mode
+     ;;mode-icons
+     monokai-theme
+     paredit
+     php-mode
+     pip-requirements
+     pymacs
+     pyenv
+     powerline
+     rainbow-delimiters
+     smartparens
+     tern
+     undo-tree
+     web-mode
          )
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
@@ -61,7 +66,7 @@
 (require 'cl)
 
 (defvar elpa-packages '(
-			web-beautify
+            web-beautify
                         ))
 
 (defun cfg:install-packages ()

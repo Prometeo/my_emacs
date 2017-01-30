@@ -9,6 +9,7 @@
 (require 'dired)
 (require 'neotree)
 (require 'ibuffer)
+(require 'undo-tree)
 
 
 (cua-mode 1)                   ;;; enabliz ctrl-z, ctrl-v ...
@@ -103,3 +104,10 @@ ad-do-it))
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode) ;; Highliht parentheses
 (git-gutter:linum-setup)
 (setq rainbow-delimiters-max-face-count 9)
+
+;; make undo-tree split on one side
+(defadvice undo-tree-visualize (around undo-tree-split-side-by-side activate)
+  "Split undo-tree side-by-side"
+  (let ((split-height-threshold nil)
+        (split-width-threshold 0))
+ad-do-it))

@@ -111,3 +111,10 @@ ad-do-it))
   (let ((split-height-threshold nil)
         (split-width-threshold 0))
 ad-do-it))
+
+
+;; Keybinding to move between frames
+(global-set-key (kbd "C-c <left>") 'windmove-left)        ; move to left window
+(global-set-key (kbd "C-c <right>") 'windmove-right)      ; move to right window
+(global-set-key (kbd "C-c <up>") 'windmove-up)            ; move to upper window
+(global-set-key (kbd "C-c <down>") 'windmove-down)        ; move to lower window

@@ -11,6 +11,7 @@
 (load "~/.emacs.d/js2.el")
 (load "~/.emacs.d/lisp.el")
 (load "~/.emacs.d/python.el")
+(load "~/.emacs.d/ibuffer.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

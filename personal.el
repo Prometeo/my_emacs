@@ -1,13 +1,15 @@
-(require 'git-gutter)
-(require 'flycheck)
+(require 'dired)
 (require 'helm-mode)
 (require 'highlight-parentheses)
+(require 'ibuffer)
 (require 'ido)
+(require 'fill-column-indicator)
+(require 'flycheck)
+(require 'git-gutter)
+(require 'neotree)
 (require 'paredit)
 (require 'rainbow-delimiters)
-(require 'dired)
-(require 'neotree)
-(require 'ibuffer)
+(require 'undo-tree)
 
 
 (cua-mode 1)                   ;;; enabliz ctrl-z, ctrl-v ...
@@ -67,6 +69,14 @@
 (global-flycheck-mode)
 
 
+;; Setting up fill-column-indicator
+(define-globalized-minor-mode
+  global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode t)
+(setq fci-rule-column 80)
+(setq fci-rule-width 1)
+(setq fci-rule-color "darkblue")
+
 ;;; Disable overwrite mode-line
 (define-key global-map [(insert)] nil)
 
@@ -94,3 +104,17 @@ ad-do-it))
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode) ;; Highliht parentheses
 (git-gutter:linum-setup)
 (setq rainbow-delimiters-max-face-count 9)
+
+;; make undo-tree split on one side
+(defadvice undo-tree-visualize (around undo-tree-split-side-by-side activate)
+  "Split undo-tree side-by-side"
+  (let ((split-height-threshold nil)
+        (split-width-threshold 0))
+ad-do-it))
+
+
+;; Keybinding to move between frames
+(global-set-key (kbd "C-c <left>") 'windmove-left)        ; move to left window
+(global-set-key (kbd "C-c <right>") 'windmove-right)      ; move to right window
+(global-set-key (kbd "C-c <up>") 'windmove-up)            ; move to upper window
+(global-set-key (kbd "C-c <down>") 'windmove-down)        ; move to lower window

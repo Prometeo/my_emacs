@@ -16,6 +16,7 @@
 (require 'paredit)
 (require 'rainbow-delimiters)
 (require 'undo-tree)
+(require 'linum)
 
 (cua-mode 1)                   ;; enable ctrl-z, ctrl-v ...
 (dired-omit-mode 1)
@@ -23,7 +24,6 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-git-gutter-mode +1)    ;; Show +, - and = on left side, by git status
 (global-hl-line-mode 1)        ;; Highlight current line always
-(global-linum-mode 1)          ;; Show line numbers globally
 (global-undo-tree-mode)        ;; Global undo tree
 (global-set-key (kbd "M-x") 'helm-M-x)   ;;; enable global helm on M-x
 (helm-mode 1)                  ;; Turn on completion for commands
@@ -79,6 +79,11 @@
 (set-keyboard-coding-system        'utf-8-unix)
 (set-terminal-coding-system             'utf-8)
 (prefer-coding-system 'utf-8)
+;; Linum plugin
+(line-number-mode   t) ;; Show line number in mode-line
+(global-linum-mode  t) ;; Show line numbers in all buffers
+(column-number-mode t) ;; Show column number in mode-line
+(setq linum-format " %d") ;; Set the numbering format for strings
 
 
 ;; Calling neotree globally at the start

@@ -98,12 +98,17 @@
 
 ;; Clipboard settings
 (setq x-select-enable-clipboard t)
+;; Paren face
+(set-face-background 'show-paren-match (face-background 'default))
+(set-face-foreground 'show-paren-match "#def")
+(set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
 (setq next-line-add-newlines nil) ;; Do not add a new line to the end when you move the cursor with the arrows
 ;; Highlight search resaults
 (setq search-highlight        t
       query-replace-highlight t
-auto-window-vscroll nil)
+      auto-window-vscroll nil)
+
 ;; Calling neotree globally at the start
 ;;(neotree-show)
 

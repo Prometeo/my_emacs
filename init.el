@@ -17,7 +17,24 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-'(inhibit-startup-screen t))
+ '(magit-log-arguments
+   (quote
+    ("--graph" "--color" "--decorate" "--show-signature" "--follow" "-n256")))
+ '(neo-vc-state-char-alist
+   (quote
+    ((up-to-date . 32)
+     (edited . 69)
+     (added . 43)
+     (removed . 45)
+     (missing . 33)
+     (needs-merge . 77)
+     (conflict . 33)
+     (unlocked-changes . 33)
+     (needs-update . 85)
+     (ignored . 38)
+     (user . 85)
+     (unregistered . 40)
+(nil . 40)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

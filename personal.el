@@ -36,6 +36,7 @@
 (show-paren-mode t)
 (smartparens-global-mode 1)
 (tool-bar-mode -1)             ;; Disable toolbar
+(tooltip-mode -1)
 (setq-default user-full-name "crandel") ;; The full name of the user logged in
 (setq ido-enable-flex-matching t)  ;; setting up ido mode
 (setq ido-everywhere t)
@@ -50,15 +51,25 @@
 (setq-default tab-width          4)                  ;; Replace TAB to 4 spaces
 (setq-default c-basic-offset     4)
 (setq-default standart-indent    4)                  ;; Set indent width 4 spaces
+;; Disable backup/autosave files
 (setq backup-inhibited t)                            ;; Do not create backup files
+(setq make-backup-files        nil)
+(setq auto-save-default        nil)
+(setq auto-save-list-file-name nil)
 (setq auto-save-default nil)                         ;; Disable autosave
 (setq scroll-preserve-screen-position 10)            ;; Set next 10 lines after cursor go to page down
 (setq neo-window-width 35)
 (global-prettify-symbols-mode 1);;; Replace "lambda" to λ, function to
 (setq inhibit-splash-screen   t)
 (setq inhibit-startup-message t)
+;;cursor
 (setq-default cursor-type 'bar)
 (set-cursor-color "#BE81F7")
+;;Imenu
+(setq imenu-auto-rescan      t) ;; actualizar automáticamente la lista de funciones en el búfer
+(setq imenu-use-popup-menu nil) ;; diálogo imenu sólo en el minibuffer
+(semantic-mode 1)
+(setq frame-title-format "%b")  ;; Display the name of the current buffer in the title bar
 
 
 ;; Calling neotree globally at the start

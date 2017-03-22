@@ -21,40 +21,57 @@
       (append
        ;; list of packages we use straight from official recipes
        '(
-     ac-html
-     auto-complete
+     ;;aggressive-indent-mode
+     avi
+     company-flx
+     company-jedi
      company-mode
      company-tern
      company-web
      el-get
      elpy
      emacs-neotree
+     emacs-fish
+     expand-region
      emmet-mode
+     expand-region
      fill-column-indicator
      flycheck
      flycheck-pos-tip
      git-gutter
      helm
+     helm-ls-git
+     helm-projectile
+     helm-swoop
      highlight-parentheses
      indent-guide
      jedi
      json-mode
      js2-mode
      less-css-mode
-     ;;mode-icons
+     livedown
+     magit
+     mark-down-mode
+     mo-git-blame
      monokai-theme
+     multiple-cursors
+     neotree
      paredit
      php-mode
      pip-requirements
      py-autopep8
      pyenv
-     pymacs
      powerline
-     rainbow-delimiters
+     projectile
+     py-autopep8
+     py-isort
+     restclient
      smartparens
      tern
      undo-tree
      web-mode
+     xclip
+     yasnippet
          )
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))

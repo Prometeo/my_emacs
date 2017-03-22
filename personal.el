@@ -118,3 +118,8 @@ ad-do-it))
 (global-set-key (kbd "C-c <right>") 'windmove-right)      ; move to right window
 (global-set-key (kbd "C-c <up>") 'windmove-up)            ; move to upper window
 (global-set-key (kbd "C-c <down>") 'windmove-down)        ; move to lower window
+
+
+;;Agressive indent
+(global-aggressive-indent-mode 1)
+(add-to-list 'aggressive-indent-excluded-modes 'html-mode)

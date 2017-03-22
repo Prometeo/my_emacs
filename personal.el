@@ -87,6 +87,14 @@
 ;; Fringe settings
 (fringe-mode '(8 . 0)) ;; Text delimiter left only
 (setq-default indicate-buffer-boundaries 'left) ;; Indication only on the left
+;; Display file size/time in mode-line
+(setq display-time-24hr-format t) ;; 24-hour time format in mode-lin
+(display-time-mode             t) ;; Show hours in mode-line
+(size-indication-mode          t) ;; File size in% -s
+(defun add-mode-line-dirtrack ()
+    (add-to-list 'mode-line-buffer-identification
+       '(:propertize (" " default-directory " ") face dired-directory)))
+(add-hook 'shell-mode-hook 'add-mode-line-dirtrack)
 
 
 ;; Calling neotree globally at the start

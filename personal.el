@@ -84,6 +84,9 @@
 (global-linum-mode  t) ;; Show line numbers in all buffers
 (column-number-mode t) ;; Show column number in mode-line
 (setq linum-format " %d") ;; Set the numbering format for strings
+;; Fringe settings
+(fringe-mode '(8 . 0)) ;; Text delimiter left only
+(setq-default indicate-buffer-boundaries 'left) ;; Indication only on the left
 
 
 ;; Calling neotree globally at the start

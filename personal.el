@@ -1,3 +1,9 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Main EMACS settings file, load settings from parts.
+
+;;; Code:
+
 (require 'dired)
 (require 'helm-mode)
 (require 'highlight-parentheses)
@@ -11,40 +17,32 @@
 (require 'rainbow-delimiters)
 (require 'undo-tree)
 
-
-(cua-mode 1)                   ;;; enabliz ctrl-z, ctrl-v ...
+(cua-mode 1)                   ;; enable ctrl-z, ctrl-v ...
 (dired-omit-mode 1)
 (electric-pair-mode 1)         ;; Electric pair mode
 (fset 'yes-or-no-p 'y-or-n-p)
-(global-git-gutter-mode +1)    ;;; Show +, - and = on left side, by git status
-(global-hl-line-mode 1)        ;;; Highlight current line always
-(global-linum-mode 1)          ;;; Show line numbers globally
-(global-undo-tree-mode)        ;;; Global undo tree
+(global-git-gutter-mode +1)    ;; Show +, - and = on left side, by git status
+(global-hl-line-mode 1)        ;; Highlight current line always
+(global-linum-mode 1)          ;; Show line numbers globally
+(global-undo-tree-mode)        ;; Global undo tree
 (global-set-key (kbd "M-x") 'helm-M-x)   ;;; enable global helm on M-x
-(helm-mode 1)                  ;;; Turn on completion for commands
-(highlight-parentheses-mode 1) ;;; Highlight pair parentheses
+(helm-mode 1)                  ;; Turn on completion for commands
+(highlight-parentheses-mode 1) ;; Highlight pair parentheses
 (ido-mode t)
 (kill-buffer "*scratch*")
-(load-theme 'monokai t)        ;;; Colorized theme
-(menu-bar-mode -1)             ;;; Disable menu
-(scroll-bar-mode -1)           ;;; Disable scrollbar
+(load-theme 'monokai t)        ;; Colorized theme
+(menu-bar-mode -1)             ;; Disable menu
+(scroll-bar-mode -1)           ;; Disable scrollbar
 (show-paren-mode t)
 (smartparens-global-mode 1)
-(tool-bar-mode -1)             ;;; Disable toolbar
-
-
-;; setting up ido mode
-(setq ido-enable-flex-matching t)
+(tool-bar-mode -1)             ;; Disable toolbar
+(setq-default user-full-name "crandel") ;; The full name of the user logged in
+(setq ido-enable-flex-matching t)  ;; setting up ido mode
 (setq ido-everywhere t)
-
-;; setting up dired mode
-(setq dired-listing-switches "-alk")
+(setq dired-listing-switches "-alk")  ;; setting up dired mode
 (setq directory-free-space-args "-Pm")
-
-;; Highlight search results
-(setq search-highlight        t)
+(setq search-highlight        t)  ;; Highlight search results
 (setq query-replace-highlight t)
-
 (setq column-number-mode 1)                          ;; Show column number
 (setq use-dialog-box nil)                            ;; Not user GUI dialogs, only minibuffer
 (auto-fill-mode -1)                                  ;; ?????
@@ -56,7 +54,11 @@
 (setq auto-save-default nil)                         ;; Disable autosave
 (setq scroll-preserve-screen-position 10)            ;; Set next 10 lines after cursor go to page down
 (setq neo-window-width 35)
-(global-prettify-symbols-mode 1) ;;; Replace "lambda" to λ, function to
+(global-prettify-symbols-mode 1);;; Replace "lambda" to λ, function to
+(setq inhibit-splash-screen   t)
+(setq inhibit-startup-message t)
+(setq-default cursor-type 'bar)
+(set-cursor-color "#BE81F7")
 
 
 ;; Calling neotree globally at the start
@@ -121,5 +123,7 @@ ad-do-it))
 
 
 ;;Agressive indent
-(global-aggressive-indent-mode 1)
-(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+;(global-aggressive-indent-mode 1)
+;(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+
+;;;personal.el ends here

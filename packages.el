@@ -21,8 +21,7 @@
       (append
        ;; list of packages we use straight from official recipes
        '(
-     ;;aggressive-indent-mode
-     avi
+     avy
      company-flx
      company-jedi
      company-mode
@@ -32,7 +31,6 @@
      elpy
      emacs-neotree
      emacs-fish
-     expand-region
      emmet-mode
      expand-region
      fill-column-indicator
@@ -40,18 +38,19 @@
      flycheck-pos-tip
      git-gutter
      helm
+     helm-ag
      helm-ls-git
      helm-projectile
      helm-swoop
      highlight-parentheses
      indent-guide
+     key-chord
      jedi
      json-mode
      js2-mode
      less-css-mode
      livedown
-     magit
-     mark-down-mode
+     markdown-mode
      mo-git-blame
      monokai-theme
      multiple-cursors
@@ -59,12 +58,13 @@
      paredit
      php-mode
      pip-requirements
-     py-autopep8
-     pyenv
      powerline
      projectile
      py-autopep8
+     pyenv
      py-isort
+     powerline
+     rainbow-delimiters
      restclient
      smartparens
      tern
@@ -85,6 +85,7 @@
 
 (defvar elpa-packages '(
             web-beautify
+            magit
                         ))
 
 (defun cfg:install-packages ()

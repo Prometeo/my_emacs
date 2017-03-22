@@ -70,6 +70,15 @@
 (setq imenu-use-popup-menu nil) ;; diálogo imenu sólo en el minibuffer
 (semantic-mode 1)
 (setq frame-title-format "%b")  ;; Display the name of the current buffer in the title bar
+;; Coding-system settings
+(set-language-environment 'UTF-8)
+(setq buffer-file-coding-system 'utf-8)
+(setq-default coding-system-for-read    'utf-8)
+(setq file-name-coding-system           'utf-8)
+(set-selection-coding-system            'utf-8)
+(set-keyboard-coding-system        'utf-8-unix)
+(set-terminal-coding-system             'utf-8)
+(prefer-coding-system 'utf-8)
 
 
 ;; Calling neotree globally at the start

@@ -96,6 +96,9 @@
        '(:propertize (" " default-directory " ") face dired-directory)))
 (add-hook 'shell-mode-hook 'add-mode-line-dirtrack)
 
+;; Clipboard settings
+(setq x-select-enable-clipboard t)
+
 
 ;; Calling neotree globally at the start
 ;;(neotree-show)

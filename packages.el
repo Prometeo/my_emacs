@@ -46,6 +46,7 @@
      indent-guide
      key-chord
      jedi
+     jedi-core
      json-mode
      js2-mode
      less-css-mode

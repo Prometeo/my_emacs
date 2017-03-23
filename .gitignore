@@ -9,6 +9,7 @@ auto-save-list
 tramp
 .\#*
 .python-environments
+recentf
 
 # Org-mode
 .org-id-locations

@@ -9,9 +9,34 @@
 (autoload 'python-mode "python-mode" "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 
-;; jedi autocomplete
-(add-hook 'python-mode-hook 'jedi:setup) ;; requires -x jedi:install-server
-(setq jedi:complete-on-dot t)
+(defun my-python-hooks()
+    (interactive)
+    (setq tab-width     4
+          python-indent 4
+          python-shell-interpreter "ipython"
+          python-shell-interpreter-args "-i")
+    (if (string-match-p "rita" (or (buffer-file-name) ""))
+        (setq indent-tabs-mode t)
+      (setq indent-tabs-mode nil)
+    )
+    (add-to-list
+        'imenu-generic-expression
+        '("Sections" "^#### \\[ \\(.*\\) \\]$" 1))
+    (setq imenu-create-index-function 'my-merge-imenu)
+    ;; pythom mode keybindings
+    (define-key python-mode-map (kbd "M-.") 'jedi:goto-definition)
+    (define-key python-mode-map (kbd "M-,") 'jedi:goto-definition-pop-marker)
+    (define-key python-mode-map (kbd "M-/") 'jedi:show-doc)
+    (define-key python-mode-map (kbd "M-?") 'helm-jedi-related-names)
+    ;; end python mode keybindings
 
-(elpy-enable)
-(setq elpy-rpc-backend "jedi")
+    (eval-after-load "company"
+        '(progn
+            (unless (member 'company-jedi (car company-backends))
+                (setq comp-back (car company-backends))
+                (push 'company-jedi comp-back)
+                (setq company-backends (list comp-back)))
+            )))
+
+(add-hook 'python-mode-hook 'my-python-hooks)
+;; (setq elpy-rpc-backend "jedi")

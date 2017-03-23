@@ -21,40 +21,58 @@
       (append
        ;; list of packages we use straight from official recipes
        '(
-     ac-html
-     auto-complete
+     avy
+     company-flx
+     company-jedi
      company-mode
      company-tern
      company-web
      el-get
      elpy
      emacs-neotree
+     emacs-fish
      emmet-mode
+     expand-region
      fill-column-indicator
      flycheck
      flycheck-pos-tip
      git-gutter
      helm
+     helm-ag
+     helm-ls-git
+     helm-projectile
+     helm-swoop
      highlight-parentheses
      indent-guide
+     key-chord
      jedi
+     jedi-core
      json-mode
      js2-mode
      less-css-mode
-     ;;mode-icons
+     livedown
+     markdown-mode
+     mo-git-blame
      monokai-theme
+     multiple-cursors
+     neotree
      paredit
      php-mode
      pip-requirements
+     powerline
+     projectile
      py-autopep8
      pyenv
-     pymacs
+     py-isort
      powerline
      rainbow-delimiters
+     restclient
      smartparens
      tern
      undo-tree
      web-mode
+     xclip
+     yasnippet
          )
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
@@ -68,6 +86,7 @@
 
 (defvar elpa-packages '(
             web-beautify
+            magit
                         ))
 
 (defun cfg:install-packages ()

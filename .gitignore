@@ -5,6 +5,8 @@
 /.emacs.desktop
 /.emacs.desktop.lock
 *.elc
+/semanticdb
+.mc-lists.el
 auto-save-list
 tramp
 .\#*

@@ -7,7 +7,7 @@
 (require 'js2-mode)
 (require 'flycheck)
 (require 'tern)
-(require 'web-beautify)
+;;(require 'web-beautify)
 
 (add-hook 'js2-mode-hook (lambda ()(flycheck-mode t)))
 (add-hook 'js2-mode-hook (lambda ()(tern-mode t)))
@@ -18,11 +18,11 @@
 (setq js2-pretty-multiline-declarations 'now)
 (setq js2-highlight-unused-variables 1)
 
-(require 'web-beautify)
-(eval-after-load 'js2
-  '(add-hook 'js2-mode-hook
-             (lambda ()
-               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+;;(require 'web-beautify)
+;;(eval-after-load 'js2
+;;  '(add-hook 'js2-mode-hook
+;;             (lambda ()
+;;               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
 
 (eval-after-load 'js2-mode
   '(add-hook 'js2-mode-hook

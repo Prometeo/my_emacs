@@ -45,7 +45,7 @@
      highlight-parentheses
      indent-guide
      key-chord
-     jedi
+     jedi  ;; this install autocomplete
      jedi-core
      json-mode
      js2-mode
@@ -64,7 +64,6 @@
      py-autopep8
      pyenv
      py-isort
-     powerline
      rainbow-delimiters
      restclient
      smartparens
@@ -85,8 +84,8 @@
 (require 'cl)
 
 (defvar elpa-packages '(
-            web-beautify
-            magit
+        ;;web-beautify
+        ;;magit
                         ))
 
 (defun cfg:install-packages ()

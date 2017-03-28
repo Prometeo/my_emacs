@@ -1,3 +1,5 @@
+
+;; code
 (require 'python)
 
 (setq ropemacs-enable-autoimport t)
@@ -12,9 +14,7 @@
 (defun my-python-hooks()
     (interactive)
     (setq tab-width     4
-          python-indent 4
-          python-shell-interpreter "ipython"
-          python-shell-interpreter-args "-i")
+          python-indent 4)
     (if (string-match-p "rita" (or (buffer-file-name) ""))
         (setq indent-tabs-mode t)
       (setq indent-tabs-mode nil)
@@ -23,7 +23,7 @@
         'imenu-generic-expression
         '("Sections" "^#### \\[ \\(.*\\) \\]$" 1))
     (setq imenu-create-index-function 'my-merge-imenu)
-    ;; pythom mode keybindings
+    ;; python mode keybindings
     (define-key python-mode-map (kbd "M-.") 'jedi:goto-definition)
     (define-key python-mode-map (kbd "M-,") 'jedi:goto-definition-pop-marker)
     (define-key python-mode-map (kbd "M-/") 'jedi:show-doc)
@@ -39,4 +39,4 @@
             )))
 
 (add-hook 'python-mode-hook 'my-python-hooks)
-;; (setq elpy-rpc-backend "jedi")
+(setq elpy-rpc-backend "jedi")

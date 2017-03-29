@@ -171,9 +171,5 @@ ad-do-it))
 (global-set-key (kbd "C-c <up>") 'windmove-up)            ; move to upper window
 (global-set-key (kbd "C-c <down>") 'windmove-down)        ; move to lower window
 
-(add-hook 'after-change-major-mode-hook (lambda() (electric-indent-mode -1)))
-;;Agressive indent
-;(global-aggressive-indent-mode 1)
-;(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
 ;;;personal.el ends here

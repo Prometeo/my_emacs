@@ -145,22 +145,6 @@
 )
 (key-chord-define-global "dd" 'my-delete-line)
 
-(global-set-key (kbd "RET") 'newline-and-indent) ;; When you press Enter, move the carriage and indent
-
-(defvar newline-and-indent t)
-;; open new line (vi's o command)
-(defun open-next-line ()
-    (interactive)
-    (end-of-line)
-    (open-line 1)
-    (next-line 1)
-    (when newline-and-indent
-        (indent-according-to-mode)))
-(global-set-key (kbd "C-o") 'open-next-line) ;; When you press Enter, move the carriage and indent
-(key-chord-define-global "ii" 'open-next-line)
-
-
-
 (global-set-key [tab] 'tab-indent-or-complete)
 (key-chord-define-global "xx" 'save-buffer)
 (key-chord-define-global "qq" 'delete-other-windows)

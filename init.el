@@ -43,7 +43,8 @@
      (ignored . 38)
      (user . 85)
      (unregistered . 40)
-     (nil . 40)))))
+     (nil . 40))))
+ '(package-selected-packages (quote (magit web-beautify))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -78,5 +79,5 @@
  '(whitespace-space-after-tab ((t (:foreground "firebrick"))))
  '(whitespace-space-before-tab ((t (:foreground "firebrick"))))
  '(whitespace-tab ((t (:foreground "magenta"))))
-'(whitespace-trailing ((t (:foreground "yellow" :weight bold)))))
+ '(whitespace-trailing ((t (:foreground "yellow" :weight bold)))))
 (put 'upcase-region 'disabled nil)

@@ -83,8 +83,8 @@
 (require 'cl)
 
 (defvar elpa-packages '(
-        ;;web-beautify
-        ;;magit
+        web-beautify
+        magit
                         ))
 
 (defun cfg:install-packages ()

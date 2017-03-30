@@ -33,7 +33,6 @@
      emacs-fish
      emmet-mode
      expand-region
-     fill-column-indicator
      flycheck
      flycheck-pos-tip
      git-gutter

@@ -25,7 +25,7 @@
      company-flx
      company-jedi
      company-mode
-     company-tern
+     company-tern   ;;this installs dash
      company-web
      el-get
      elpy

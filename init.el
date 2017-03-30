@@ -19,11 +19,13 @@
 (load "~/.emacs.d/lisp.el")
 (load "~/.emacs.d/python.el")
 (load "~/.emacs.d/ibuffer.el")
+(load "~/.emacs.d/keybindings_my.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen t)
  '(magit-log-arguments
    (quote
     ("--graph" "--color" "--decorate" "--show-signature" "--follow" "-n256")))
@@ -41,7 +43,7 @@
      (ignored . 38)
      (user . 85)
      (unregistered . 40)
-(nil . 40)))))
+     (nil . 40)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -76,5 +78,5 @@
  '(whitespace-space-after-tab ((t (:foreground "firebrick"))))
  '(whitespace-space-before-tab ((t (:foreground "firebrick"))))
  '(whitespace-tab ((t (:foreground "magenta"))))
- '(whitespace-trailing ((t (:foreground "yellow" :weight bold)))))
+'(whitespace-trailing ((t (:foreground "yellow" :weight bold)))))
 (put 'upcase-region 'disabled nil)

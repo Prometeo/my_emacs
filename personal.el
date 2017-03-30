@@ -17,6 +17,7 @@
 (require 'rainbow-delimiters)
 (require 'undo-tree)
 (require 'linum)
+(require 'key-chord)
 
 (cua-mode 1)                   ;; enable ctrl-z, ctrl-v ...
 (dired-omit-mode 1)
@@ -62,6 +63,7 @@
 (global-prettify-symbols-mode 1);;; Replace "lambda" to λ, function to
 (setq inhibit-splash-screen   t)
 (setq inhibit-startup-message t)
+(key-chord-mode 1)
 ;;cursor
 (setq-default cursor-type 'bar)
 (set-cursor-color "#BE81F7")
@@ -120,12 +122,12 @@
 
 
 ;; Setting up fill-column-indicator
-(define-globalized-minor-mode
-  global-fci-mode fci-mode (lambda () (fci-mode 1)))
-(global-fci-mode t)
-(setq fci-rule-column 80)
-(setq fci-rule-width 1)
-(setq fci-rule-color "darkblue")
+;;(define-globalized-minor-mode
+;;  global-fci-mode fci-mode (lambda () (fci-mode 1)))
+;;(global-fci-mode t)
+;;(setq fci-rule-column 80)
+;;(setq fci-rule-width 1)
+;;(setq fci-rule-color "darkblue")
 
 ;;; Disable overwrite mode-line
 (define-key global-map [(insert)] nil)
@@ -169,9 +171,5 @@ ad-do-it))
 (global-set-key (kbd "C-c <up>") 'windmove-up)            ; move to upper window
 (global-set-key (kbd "C-c <down>") 'windmove-down)        ; move to lower window
 
-
-;;Agressive indent
-;(global-aggressive-indent-mode 1)
-;(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
 ;;;personal.el ends here

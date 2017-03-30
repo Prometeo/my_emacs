@@ -9,7 +9,6 @@
 (require 'highlight-parentheses)
 (require 'ibuffer)
 (require 'ido)
-(require 'fill-column-indicator)
 (require 'flycheck)
 (require 'git-gutter)
 (require 'neotree)

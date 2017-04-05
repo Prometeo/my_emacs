@@ -30,26 +30,13 @@
 (add-hook 'web-mode-hook (lambda ()
                            (setq web-mode-markup-indent-offset 2)
                            (setq web-mode-css-indent-offset 2)
-                           (setq web-mode-code-indent-offset 4)
-                           (setq web-mode-indent-style 4)
+                           (setq web-mode-code-indent-offset 2)
+                           (setq web-mode-indent-style 2)
                            (setq web-mode-enable-auto-pairing t)
-                           (setq web-mode-enable-css-colorization t)x
+                           (setq web-mode-enable-css-colorization t)
+                           (setq web-mode-enable-current-element-highlight t)
+                           (setq web-mode-enable-current-column-highlight t)
 ))
-
-
-(defun my-setup-php ()
-  ;; enable web mode
-  (web-mode)
-
-  ;; make these variables local
-  (make-local-variable 'web-mode-code-indent-offset)
-  (make-local-variable 'web-mode-markup-indent-offset)
-  (make-local-variable 'web-mode-css-indent-offset)
-
-  ;; set indentation, can set different indentation level for different code type
-  (setq web-mode-code-indent-offset 4)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-markup-indent-offset 2))
 
 
 (setq web-mode-enable-current-column-highlight t)
@@ -61,7 +48,6 @@
 (setq web-mode-enable-block-face t)
 
 
-(add-to-list 'auto-mode-alist '("\\.php$" . my-setup-php))
 (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 
 
@@ -83,8 +69,12 @@
 (add-hook 'less-mode-hook 'emmet-mode)
 (add-hook 'emmet-mode-hook
           (lambda ()
-            (setq emmet-indentation 4)))
+            (setq emmet-indentation 2)))
 (setq emmet-preview-default nil)
 
 
 (setq web-mode-enable-auto-pairing t)
+
+(setq web-mode-ac-sources-alist
+  '(("css" . (ac-source-css-property))
+    ("html" . (ac-source-words-in-buffer ac-source-abbrev))))

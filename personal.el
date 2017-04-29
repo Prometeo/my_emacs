@@ -162,5 +162,5 @@ ad-do-it))
 (global-set-key (kbd "C-c <up>") 'windmove-up)            ; move to upper window
 (global-set-key (kbd "C-c <down>") 'windmove-down)        ; move to lower window
 
-
+(set-face-background 'region "darkblue")
 ;;;personal.el ends here

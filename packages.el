@@ -70,6 +70,7 @@
      undo-tree
      web-mode
      xclip
+     yaml-mode
      yasnippet
          )
 

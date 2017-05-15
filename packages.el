@@ -21,6 +21,7 @@
       (append
        ;; list of packages we use straight from official recipes
        '(
+     autopep8
      avy
      company-flx
      company-jedi

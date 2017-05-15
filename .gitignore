@@ -12,6 +12,7 @@ tramp
 .\#*
 .python-environments
 recentf
+session.*
 
 # Org-mode
 .org-id-locations

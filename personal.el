@@ -118,6 +118,7 @@
 (with-eval-after-load 'flycheck
   (flycheck-pos-tip-mode))
 (global-flycheck-mode)
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 
 ;;; Disable overwrite mode-line

@@ -66,7 +66,7 @@
 ;; Expand region
 (global-unset-key (kbd "C-q"))
 (global-set-key (kbd "C-q") 'er/expand-region)
-(key-chord-define-global "//" 'er/expand-region)
+(key-chord-define-global "**" 'er/expand-region)
 
 ;; move line up
 (defun move-line-up ()
@@ -143,7 +143,7 @@
    (save-excursion (move-end-of-line 1) (point)))
   (delete-char 1)
 )
-(key-chord-define-global "dd" 'my-delete-line)
+(key-chord-define-global "ññ" 'my-delete-line)
 
 
 (key-chord-define-global "xx" 'save-buffer)

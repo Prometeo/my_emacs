@@ -17,7 +17,6 @@
 (require 'undo-tree)
 (require 'linum)
 (require 'key-chord)
-(require 'agressive-indent)
 
 
 (global-aggressive-indent-mode 1)  ;; enable aggressive-indent mode globally

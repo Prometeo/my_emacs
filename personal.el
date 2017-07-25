@@ -17,7 +17,10 @@
 (require 'undo-tree)
 (require 'linum)
 (require 'key-chord)
+(require 'agressive-indent)
 
+
+(global-aggressive-indent-mode 1)  ;; enable aggressive-indent mode globally
 (cua-mode 1)                   ;; enable ctrl-z, ctrl-v ...
 (dired-omit-mode 1)
 (electric-pair-mode 1)         ;; Electric pair mode
@@ -113,6 +116,7 @@
 ;; Calling neotree globally at the start
 ;;(neotree-show)
 
+(add-to-list 'aggressive-indent-excluded-modes 'html-mode) ;; disable aggressive-indent mode fro html files
 
 ;; enabling flycheck
 (with-eval-after-load 'flycheck

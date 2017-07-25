@@ -73,6 +73,7 @@
      xclip
      yaml-mode
      yasnippet
+     aggressive-indent
          )
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
@@ -87,7 +88,7 @@
 (defvar elpa-packages '(
         web-beautify
         magit
-                        ))
+        ))
 
 (defun cfg:install-packages ()
   (let ((pkgs (remove-if #'package-installed-p elpa-packages)))

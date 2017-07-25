@@ -21,58 +21,58 @@
       (append
        ;; list of packages we use straight from official recipes
        '(
-     autopep8
-     avy
-     company-flx
-     company-jedi
-     company-mode
-     company-tern   ;;this installs dash
-     company-web
-     el-get
-     elpy
-     emacs-neotree
-     emacs-fish
-     emmet-mode
-     expand-region
-     flycheck
-     flycheck-pos-tip
-     git-gutter
-     helm
-     helm-ag
-     helm-ls-git
-     helm-projectile
-     helm-swoop
-     highlight-parentheses
-     indent-guide
-     key-chord
-     jedi  ;; this install autocomplete
-     jedi-core
-     json-mode
-     js2-mode
-     less-css-mode
-     livedown
-     markdown-mode
-     mo-git-blame
-     monokai-theme
-     multiple-cursors
-     neotree
-     paredit
-     php-mode
-     pip-requirements
-     powerline
-     projectile
-     py-autopep8
-     pyenv
-     py-isort
-     rainbow-delimiters
-     restclient
-     smartparens
-     tern
-     undo-tree
-     web-mode
-     xclip
-     yaml-mode
-     yasnippet
+         autopep8
+         avy
+         company-flx
+         company-jedi
+         company-mode
+         company-tern   ;;this installs dash
+         company-web
+         el-get
+         elpy
+         emacs-neotree
+         emacs-fish
+         emmet-mode
+         expand-region
+         flycheck
+         flycheck-pos-tip
+         git-gutter
+         helm
+         helm-ag
+         helm-ls-git
+         helm-projectile
+         helm-swoop
+         highlight-parentheses
+         indent-guide
+         key-chord
+         jedi  ;; this install autocomplete
+         jedi-core
+         json-mode
+         js2-mode
+         less-css-mode
+         livedown
+         markdown-mode
+         mo-git-blame
+         monokai-theme
+         multiple-cursors
+         neotree
+         paredit
+         php-mode
+         pip-requirements
+         powerline
+         projectile
+         py-autopep8
+         pyenv
+         py-isort
+         rainbow-delimiters
+         restclient
+         smartparens
+         tern
+         undo-tree
+         web-mode
+         xclip
+         yaml-mode
+         yasnippet
          )
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
@@ -85,9 +85,9 @@
 (require 'cl)
 
 (defvar elpa-packages '(
-        web-beautify
-        magit
-        ))
+                        web-beautify
+                        magit
+                        ))
 
 (defun cfg:install-packages ()
   (let ((pkgs (remove-if #'package-installed-p elpa-packages)))

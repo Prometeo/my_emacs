@@ -27,7 +27,7 @@
 ;; Magit
 (global-unset-key (kbd "C-x C-z"))
 (global-set-key (kbd "C-x C-z") 'magit-status)
-
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup);; Show list of commands availabel in the buffer
 ;; Mo-git-blame
 (global-set-key (kbd "C-c g") 'mo-git-blame-current)
 (key-chord-define-global "gg" 'mo-git-blame-current)

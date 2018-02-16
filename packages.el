@@ -22,6 +22,7 @@
        ;; list of packages we use straight from official recipes
        '(
          autopep8
+         aggressive-indent-mode
          avy
          company-flx
          company-jedi
@@ -45,17 +46,15 @@
          highlight-parentheses
          indent-guide
          key-chord
-         jedi  ;; this install autocomplete
+         jedi
          jedi-core
          json-mode
          js2-mode
          less-css-mode
          livedown
          markdown-mode
-         mo-git-blame
          monokai-theme
          multiple-cursors
-         neotree
          paredit
          php-mode
          pip-requirements

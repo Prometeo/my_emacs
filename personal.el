@@ -21,7 +21,7 @@
 
 (global-aggressive-indent-mode 1)  ;; enable aggressive-indent mode globally
 (cua-mode 1)                   ;; enable ctrl-z, ctrl-v ...
-(dired-omit-mode 1)
+;;(dired-omit-mode 1)
 (electric-pair-mode 1)         ;; Electric pair mode
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-git-gutter-mode +1)    ;; Show +, - and = on left side, by git status

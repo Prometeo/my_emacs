@@ -56,12 +56,12 @@
 
 
 ;; Avy
-(global-unset-key (kbd "C-_"))
-(global-unset-key (kbd "C-/"))
-(global-unset-key (kbd "C-c /"))
-(global-set-key (kbd "C-_") 'avy-goto-char)
-(global-set-key (kbd "C-/") 'avy-goto-char)
-(global-set-key (kbd "C-c /") 'avy-goto-line)
+;;(global-unset-key (kbd "C-_"))
+;;(global-unset-key (kbd "C-/"))
+;;(global-unset-key (kbd "C-c /"))
+;;(global-set-key (kbd "C-_") 'avy-goto-char)
+;;(global-set-key (kbd "C-c /") 'avy-goto-line)
+;;(global-set-key (kbd "C-/") 'avy-goto-char)
 
 ;; Expand region
 (global-unset-key (kbd "C-q"))

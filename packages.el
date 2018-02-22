@@ -84,8 +84,10 @@
 (require 'cl)
 
 (defvar elpa-packages '(
+                        treemacs
                         web-beautify
                         magit
+                        use-package
                         ))
 
 (defun cfg:install-packages ()

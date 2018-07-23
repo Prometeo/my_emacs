@@ -21,7 +21,7 @@
 
 (global-aggressive-indent-mode 1)  ;; enable aggressive-indent mode globally
 (cua-mode 1)                   ;; enable ctrl-z, ctrl-v ...
-;;(dired-omit-mode 1)
+					;(dired-omit-mode 1)
 (electric-pair-mode 1)         ;; Electric pair mode
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-git-gutter-mode +1)    ;; Show +, - and = on left side, by git status
@@ -119,29 +119,27 @@
 
 ;; enabling flycheck
 (with-eval-after-load 'flycheck
-  (flycheck-pos-tip-mode))
+(flycheck-pos-tip-mode))
 (global-flycheck-mode)
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
 
 ;;; Disable overwrite mode-line
 (define-key global-map [(insert)] nil)
-
 (defun format-current-buffer()
-  (indent-region (point-min) (point-max)))
+(indent-region (point-min) (point-max)))
 (defun untabify-current-buffer()
   (if (not indent-tabs-mode)
       (untabify (point-min) (point-max)))
   nil)
 (add-to-list 'write-file-functions 'untabify-current-buffer)
 (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-
 (powerline-default-theme)
 (setq visible-bell t)
 
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode) ;; Highliht parentheses
-(git-gutter:linum-setup)
+;(git-gutter:linum-setup)  ;;; malogra la identacion despues de guardar
 (setq rainbow-delimiters-max-face-count 9)
 
 ;; make undo-tree split on one side

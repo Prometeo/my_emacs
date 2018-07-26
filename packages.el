@@ -87,6 +87,7 @@
                         treemacs
                         web-beautify
                         magit
+                        rust-mode
                         use-package
                         ))
 
